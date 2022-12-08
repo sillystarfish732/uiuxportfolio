@@ -1,6 +1,9 @@
 
 body {
   text-align: center;
+  max-width: 60vw;
+  align-items: center;
+  margin-left: 20vw;
 }
 
 h1{
@@ -46,22 +49,12 @@ p{
 }
 
 img{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
+  margin-left: 15 rem;
+  margin-right: 15 rem;
+  margin-top: 5vh;
+  max-width: 60vw;
 
-.fixedbutton {
-  position: fixed;
-  bottom: 5vh;
-  right: -5px;
-  --bs-btn-border-radius: 0rem;
-  --bs-btn-bg: rgb(112, 146, 52);
-  --bs-btn-hover-bg: rgb(156, 172, 117);
-  --bs-btn-border-color:  rgb(112, 146, 52);
-  --bs-btn-hover-border-color:rgb(156, 172, 117);
-  z-index:2;
+
 }
 
 .custom-tog.navbar-toggler {
@@ -73,23 +66,6 @@ li a:hover {
   background-color: rgb(209, 232, 154);
 }
 
-/**
-responsive map css copied from: 
-https://www.labnol.org/internet/embed-responsive-google-maps/28333/
-**/
-.google-maps {
-  position: relative;
-  padding-bottom: 40%;  
-  height: 0;
-  overflow: hidden;
-}
-.google-maps iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
 
 /*
 JOSH COMEAU's resets
