@@ -1,10 +1,24 @@
 
 body {
-  text-align: center;
   max-width: 60vw;
-  align-items: center;
   margin-left: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
 }
+
+.photogrid{
+
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  max-width: 50vw;
+  max-height: 20vh;
+
+}
+
+
 
 h1{
   color: rgba(41, 111, 207, 0.753);
@@ -16,7 +30,7 @@ h1{
 h2{
   text-transform: uppercase;  
   font-weight: 200;
-  color: rgb(112, 146, 52);
+  color: rgba(41, 111, 207, 0.753);
   text-align: center;
   font-family: 'Manrope', sans-serif;
   margin-top: 2rem;
@@ -44,17 +58,15 @@ p{
   font-weight: 400;
   text-align: center;
   text-transform: none;
-  margin-left: 15vw;
-  margin-right: 15vw;
+
 }
 
 img{
-  margin-left: 15 rem;
-  margin-right: 15 rem;
   margin-top: 5vh;
   max-width: 60vw;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-tog.navbar-toggler {
