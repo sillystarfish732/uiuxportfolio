@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="boostrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:ital@1&family=Archivo:wght@800&family=Tenor+Sans&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!--
+      This project uses bootstrap and copied and pasted code from bootstrap in the css and javascript bundles,
+      as well as smaller elements as labeled. 
+      ...-->
+  <h1>MegaPlaylist Maker</h1>
+
+  <p>To practice developing using react, I created a playlist maker that allows you to compile
+    songs from entire albums. There are also filters and sorting that allow you to discover new artist.
+    Click on the image below to check out the site and discover some of my favorite alumbs!
+  </p>
+  <a href="https://sillystarfish732.github.io/development/">
+    <img style=" max-width:60vw; " src="assets/megaplaylistmaker.png" alt="charging station header image">
+
+  </a>
+
+
+
+  <h3>
+    Goal and Value of the Application
+  </h3>
+  <p>
+    As someone who likes discovering new music and listening to playists but does not like taking too much time to
+    curate them, this web app is a simple way to sort and filter through albums and add then quickly to populate a long
+    megaplaylist.
+
+  <h3> Usability Principles Considered</h2>
+    <p>
+      Since the albums are complex, busy, and colorful, so the rest of the program is kept simple with clear headings
+      and buttons. To allow for easing finding of new music, a obscure filter (artist who have less than 1 million
+      monthly spotify listens) and newly released (albums from 2022) filter are options to filter by.
+
+    </p>
+    <h3>Organization of Components
+    </h3>
+
+    <p>
+      The program is organized into an AlbumsItem component that represents each album display and the cart component
+      that is rendered inside the sidebar navigation with the control panel.
+
+      The AlbumsItem component handles rendering each album display, with props containing all the information for
+      rendering. The cart component is the playlist aggregator, and takes in a prop that is the array with the album
+      name and track amount to aggregate.
+
+      The state changes when filtering and sorting make the display mapping updated. The albums show up default sorted
+      by album name alphabetically, so after the state is copied over from the data json, it is sorted.</p>
+
+    </p>
+    <br>
+</body>
+
+<body>
+  <input type="checkbox" id="active">
+  <label for="active" class="menu-btn"><span></span></label>
+  <label for="active" class="close"></label>
+  <div class="wrapper">
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="uiux.html">UIUX</a></li>
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="other.html">All</a></li>
+
+    </ul>
+  </div>
+</body>
+
+
+</html>

@@ -11,8 +11,8 @@ h1 {
   text-transform: none;
   text-align: center;
   font-family: 'tenor sans', sans-serif;
-  font-size: 2rem;
-  max-width: 60vw;
+  font-size: 2.25rem;
+  max-width: 40vw;
   margin-top: 5vh;
   margin-bottom: 5vh;
 
@@ -20,12 +20,12 @@ h1 {
 
 h2 {
   text-transform: uppercase;
-  color: rgb(72, 116, 204);
+  color: rgb(59, 59, 59);
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline;
 
-  font-family: 'archivo black', sans-serif;
-  margin-top: 2rem;
+  font-family: 'archivo', sans-serif;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-size: 2rem;
   max-width: 60vw;
@@ -34,9 +34,9 @@ h2 {
 
 h3 {
   text-transform: none;
-  color: rgba(0, 0, 0, 0.753);
+  color: rgb(0, 0, 0);
   text-align: center;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'tenor sans', sans-serif;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 10vw;
