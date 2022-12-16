@@ -13,54 +13,105 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&display=swap" rel="stylesheet">
-  <script src="bootstrap.bundle.js"></script>
-  <title>Lucia Tian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Tenor+Sans&display=swap" rel="stylesheet">
 
-  <!-- code copied from Bootstrap Navbar -->
-  <nav class="navbar navbar-expand-sm"
-    style="font-weight: 400;
-    font-family: 'Manrope', sans-serif;  margin-left: 10vw; margin-right:10vw; font-size: 18px; background-color: #ffffff; ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <b>Lucia Tian</b></a>
-      <button class="navbar-toggler custom-tog" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="uiux.html">UIUX</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="other.html">Other</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://luciatian.org/">Architecture</a>
-          </li>
-        </ul>
+  <script src="bootstrap.bundle.js"></script>
+  <title>Portfolio</title>
+
+  <!-- code copied and modifed from  https://codepen.io/alphardex/pen/NWxNyXb -->
+
+<body style=" overflow-y: hidden;  background-color: rgb(0, 0, 0);">
+  <div>
+    <div class="external">
+      <div class="horizontal-scroll-wrapper">
+
+        <div class="img-wrapper faster">
+          <a target="_blank" rel="noopener">
+            <img src="assets/blackspacer.png" alt="">
+          </a>
+        </div>
+
+
+        <div class="img-wrapper fastest">
+          <p style=" margin-left:20vw;text-align: left; margin-top:10vh; font-size: 3vh; 
+          max-width: 60vh; color:white;">Hello! I'm
+            <b> Firstname Lastname</b>, an
+            Architecture and Behavioral
+            Decision Sciences
+            student at Brown University
+            with special interests in human decision making and its links to economics, psychology, computer science,
+            and of course, architecture. I believe in a human-centered design process, and I am fascinated in particular
+            by the relationship and interconnectivity between human behavior and the built environment.
+          </p>
+        </div>
+
+        <div class="img-wrapper faster">
+          <a target="_blank" rel="noopener">
+            <img src="assets/blackspacer.png" alt="">
+          </a>
+        </div>
+
+        <div class="img-wrapper faster1">
+          <a target="_blank" rel="noopener">
+            <img src="assets/stool.JPG" alt="">
+          </a>
+        </div>
+
+
+        <div class="img-wrapper faster">
+          <a href="personas.html" target="_blank" rel="noopener">
+            <img class="indeximage" src="assets/headerimagep.png" alt="">
+          </a>
+        </div>
+
+
+        <div class="img-wrapper fastest vertical">
+          <a href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/"
+            target="_blank" rel="noopener">
+            <img src="assets/nightview2.2.png" alt="">
+          </a>
+        </div>
+
+        <div class="img-wrapper fastest">
+          <a href="redesign.html" target="_blank" rel="noopener">
+            <img class="indeximage" src="assets/vegantree.png" alt="">
+          </a>
+        </div>
+
+        <div class="img-wrapper slower">
+          <a target="_blank" rel="noopener">
+            <img src="assets/casa martirani analytical final.jpg" alt="">
+          </a>
+        </div>
+
+
+        <div class="img-wrapper last fastest">
+          <a href="https://sillystarfish732.github.io/development/" target="_blank" rel="noopener">
+            <img src="assets/megaplaylistmaker.png" alt="">
+          </a>
+        </div>
       </div>
     </div>
-  </nav>
-  <br>
+    <div>
 
-<body>
-  <h1>Home</h1>
-  <div style=" display: flex;align-items: center;justify-content: center;">
-    <img style="max-width:20vw;   align-items: center;" src="assets/luciatian.JPG" alt="photo of Lucia">
-  </div>
-
-  <div>
-    <br>
-  <p>Hello! I'm Lucia Tian, an Architecture and Behavioral Decision Sciences concentrator at Brown University
-    with special interests in human decision making and its links to economics, psychology, computer science,
-    and of course, architecture. I believe in a human-centered design process, and I am fascinated in particular
-    by the relationship and interconnectivity between human behavior and the built environment.</p>
-
-
+    </div>
 </body>
 
+<body>
+  <input type="checkbox" id="active">
+  <label for="active" class="menu-btn"><span></span></label>
+  <label for="active" class="close"></label>
+  <div class="wrapper">
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="uiux.html">UIUX</a></li>
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="other.html">All</a></li>
+
+    </ul>
+  </div>
+</body>
 
 
 </html>

@@ -1,82 +1,402 @@
-
 body {
-  max-width: 60vw;
-  margin-left: 20vw;
   display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: column;
+  background-color: rgb(255, 255, 255);
 }
 
-.photogrid{
-
-  display:flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  max-width: 50vw;
-  max-height: 20vh;
+h1 {
+  color: rgb(0, 0, 0);
+  text-transform: none;
+  text-align: center;
+  font-family: 'tenor sans', sans-serif;
+  font-size: 2rem;
+  max-width: 60vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 
 }
 
-
-
-h1{
-  color: rgba(41, 111, 207, 0.753);
+h2 {
+  text-transform: uppercase;
+  color: rgb(72, 116, 204);
   text-align: center;
-    font-family: 'Manrope', sans-serif;
-    font-weight: 800;
-  }
+  text-decoration: none;
 
-h2{
-  text-transform: uppercase;  
-  font-weight: 200;
-  color: rgba(41, 111, 207, 0.753);
-  text-align: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'archivo black', sans-serif;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-size: 2rem;
+  max-width: 60vw;
+
 }
 
-h3{
-  text-transform: none;  
-  font-weight: 200;
-  color: rgba(41, 111, 207, 0.753);
+h3 {
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.753);
   text-align: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 10vw;
   margin-right: 10vw;
   font-size: 18px;
+  max-width: 50vw;
 
 }
 
-p{
-  color: #1C1C1C;
-  font-family: 'Manrope', sans-serif;  font-size: 15px;
+p {
+  margin-top: 1vh;
+  color: #000000;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   text-align: center;
   text-transform: none;
-
+  max-width: 50vw;
 }
 
-img{
-  margin-top: 5vh;
-  max-width: 60vw;
+b {
+  font-family: 'Archivo Black', sans-serif;
+  text-decoration-line: underline;
+}
+
+img {
+  max-width: 40vh;
+  max-height: 80vh;
+  transition: .5s;
+  vertical-align: top;
+  filter: saturate(0%) brightness(80%) contrast(140%);
+  margin-top: 3vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+a:hover img {
+  filter: saturate(100%);
+}
+
+.photogrid {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 70vw;
+  align-items: center;
+}
+
+
+
 .custom-tog.navbar-toggler {
   border-color: rgb(255, 255, 255);
-} 
-
-
-li a:hover {
-  background-color: rgb(207, 225, 236);
 }
+
+
+/*** menu nav modifed and inspired from https://codepen.io/yuhomyan/pen/ExKvNVa **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  /*left: -100%;*/
+  right: -100%;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+  transition: all 0.6s ease-in-out;
+}
+
+#active:checked~.wrapper {
+  /*left: 0;*/
+  right: 0;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 5;
+  right: 20px;
+  /*left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10%;
+  font-size: 20px;
+  cursor: pointer;
+  /*color: #fff;*/
+  /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 30%;
+  width: 40%;
+  border-bottom: 2px solid rgb(141, 141, 141);
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.menu-btn:before {
+  transform: translateY(-8px);
+}
+
+.menu-btn:after {
+  transform: translateY(8px);
+}
+
+
+.close {
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* closing animation */
+#active:checked+.menu-btn span {
+  transform: scaleX(0);
+}
+
+#active:checked+.menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #fff;
+}
+
+#active:checked+.menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #fff;
+}
+
+.wrapper ul {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper ul li {
+  height: 10%;
+  margin: 15px 0;
+}
+
+.wrapper ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  position: absolute;
+  line-height: 50px;
+  margin: 5px 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.wrapper ul li a:hover:after {
+  font-family: ar;
+  transform: scaleY(1);
+}
+
+.wrapper ul li a:hover {
+  text-decoration: underline;
+  font-family: "archivo black";
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.content .title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#active:checked~.wrapper ul li a {
+  opacity: 1;
+}
+
+.wrapper ul li a {
+  transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(100px);
+}
+
+#active:checked~.wrapper ul li a {
+  transform: none;
+  transition-timing-function: ease, cubic-bezier(.1, 1.3, .3, 1);
+  /* easeOutBackを緩めた感じ */
+  transition-delay: .6s;
+  transform: translateX(-100px);
+}
+
+
+/* home page horizontal scroll inspired and modified from https://codepen.io/pehaa/pen/zYxbxQg */
+
+* {
+  box-sizing: border-box;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+.external {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.horizontal-scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vh;
+  transform: rotate(-90deg) translate3d(0, -100vh, 0);
+  transform-origin: right top;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  height: 100vw;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  padding-bottom: 10rem;
+}
+
+.img-wrapper {
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  transform-origin: 50% 50%;
+  transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
+  transition: 1s;
+}
+
+.img-wrapper:hover {
+  min-height: 45vh;
+}
+
+.slower {
+  transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
+}
+
+.slower1 {
+  transform: rotate(90deg) translateZ(-.25px) scale(1.05) translateX(0%) translateY(8vh);
+}
+
+.slower2 {
+  transform: rotate(90deg) translateZ(-.3px) scale(1.3) translateX(0%) translateY(2vh);
+}
+
+.slower-down {
+  transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(16vh);
+}
+
+.faster {
+  transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(0%) translateY(14vh);
+}
+
+.faster1 {
+  transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh);
+}
+
+.fastest {
+  transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh);
+}
+
+.vertical {
+  transform: rotate(90deg) translateZ(-.15px) scale(1.15) translateX(0%) translateY(0%);
+}
+
+.last {
+  transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh);
+}
+
+.scroll-info,
+header {
+  position: absolute;
+  left: 1rem;
+}
+
+.scroll-info {
+  top: 1rem;
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+
+}
+
+
+.img-wrapper a {
+  overflow: hidden;
+  display: block;
+  padding: 0vh;
+  /***
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+  ***/
+
+}
+
+p {
+  margin: 0;
+}
+
+.scroll-info {
+  display: flex;
+  align-items: center;
+}
+
+.icon svg {
+  width: 50px;
+  fill: currentcolor;
+}
+
+/**** bootstrap carousel fix ***/
+.carousel-inner {
+  max-width: 60vw;
+}
+
+.carousel-inner img {
+  max-width: 60vw;
+}
+
+/************/
 
 
 /*
@@ -84,21 +404,27 @@ JOSH COMEAU's resets
 
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
 /*
   2. Remove default margin
 */
 * {
   margin: 0;
 }
+
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
+html,
+body {
   height: 100%;
 }
+
 /*
   Typographic tweaks!
   4. Add accessible line-height
@@ -108,28 +434,45 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
 /*
   6. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
-  max-width: 100%;
 }
+
 /*
   7. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
+
 /*
   8. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
+
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
